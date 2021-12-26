@@ -1,27 +1,35 @@
-import styles from './homestyle.module.css';
+import { useEffect, useState } from 'react';
 import ProductCard from '../../components/productCard/ProductCard.jsx';
+import { getProducts } from '../../api/apis.js';
+import styles from './homestyle.module.css';
 
 const Home = () => {
 
+  const [ products, setProducts ] = useState([]);
+
   const generateRandomTime = () => {
-    const minuts = Math.random() * (60 - 0) + 0;
-    const seconds = minuts > 0 ? Math.random() * (60 - 0) + 0 : Math.random() * (60 - 30) + 30;
+    const minuts = Math.round(Math.random() * (60 - 0) + 0);
+    const seconds = minuts > 0 ? Math.round(Math.random() * (60 - 0) + 0) : Math.round(Math.random() * (60 - 30) + 30);
     return ({ minuts, seconds })
   }
 
-  const array = [1,2,3,4,5]
-
-  const product = { name: 'product', url: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg", timer: 10, rating: 5 }
-  const timer = { minuts: 1, seconds: 40 }
+  useEffect( () => {
+    const fetchProducts = async () => {
+      const products = await getProducts()
+      console.log('products', products);
+      setProducts(products.map(item => ({ product: item, timer: generateRandomTime() })))
+    };
+    fetchProducts();
+  },[])
 
   return(
     <div className={styles.container}>
       {
-        array.map((item,index)=>(
+        products.length > 0 && products.map( item =>(
           <ProductCard
-            key={index}
-            product={product}
-            timer={timer}
+            key={item.product.id}
+            product={item.product}
+            timer={item.timer}
           ></ProductCard>
         ))
       }

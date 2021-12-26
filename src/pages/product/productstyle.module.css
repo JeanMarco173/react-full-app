@@ -32,16 +32,18 @@
   flex-direction: column;
 }
 .product__name__text{
-  font-size: 30px;
-  font-weight: 700;
-}
-.product__detail__label{
-  margin-top: 20px;
   font-size: 20px;
   font-weight: 700;
+  text-align: justify;
+}
+.product__detail__label{
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: underline;
 }
 .product__detail__text{
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 17px;
   text-align: justify;
 }

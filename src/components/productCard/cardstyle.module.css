@@ -26,6 +26,12 @@
 .product__name__text{
   font-size: 20px;
   font-weight: 700;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 .product__detail__text{
   font-size: 17px;
@@ -40,8 +46,4 @@
   background-color: #0D0D0D;
   border: 1px solid #0D0D0D;
   border-radius: 10px;
-}
-.product__detail__button:hover {
-  background-color: #8C8C8C;
-  border: 1px solid #8C8C8C;
 }
