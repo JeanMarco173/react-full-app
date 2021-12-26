@@ -47,3 +47,13 @@
   border: 1px solid #0D0D0D;
   border-radius: 10px;
 }
+.product__disable__detail__button{
+  margin-top: 10px;
+  width: 100px;
+  height: 35px;
+  font-size: 17px;
+  color: #fff;
+  background-color: grey;
+  border: 1px solid grey;
+  border-radius: 10px;
+}

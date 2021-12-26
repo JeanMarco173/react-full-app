@@ -32,6 +32,7 @@ const ProductCard = (props) => {
   },[seconds])
 
   function pad2(number) {
+    console.log('number',number);
     return (number < 10 ? '0' : '') + number
   }
 
@@ -41,11 +42,11 @@ const ProductCard = (props) => {
       <div className={styles.product__detail__container}>
         <label className={styles.product__name__text}>{product.title}</label>
         <label className={styles.product__detail__text}>Rating: {product.rating.rate}</label>
-        <label className={styles.product__detail__text}>Timer: {pad2(minuts)}:{seconds}</label>
+        <label className={styles.product__detail__text}>Timer: {pad2(minuts)}:{pad2(seconds)}</label>
         {
           minuts > 0 && seconds > 0
             ? <Link to={`/product/${product.id}`}><button className={styles.product__detail__button}>Detalle</button></Link>
-            : <button className={styles.product__detail__button} onClick={ () => { alert('Ha expirado el tiempo del producto')}}>Detalle</button>
+            : <button className={styles.product__disable__detail__button} onClick={ () => { alert('Ha expirado el tiempo para ver el producto')}}>Detalle</button>
         }
       </div>
     </div>
