@@ -1,0 +1,17 @@
+.header__container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 30px;
+  padding: 10px;
+  background-color: grey;
+}
+.link__text{
+  font-size: 25px;
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+}
+.link__text:hover{
+  color: #fff;
+}

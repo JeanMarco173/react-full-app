@@ -37,7 +37,7 @@ const ProductCard = (props) => {
 
   return(
     <div className={styles.product__container}>
-      <img src={product.image} alt="Trulli" className={styles.product__image}/>
+      <img src={product.image} alt={product.title} className={styles.product__image}/>
       <div className={styles.product__detail__container}>
         <label className={styles.product__name__text}>{product.title}</label>
         <label className={styles.product__detail__text}>Rating: {product.rating.rate}</label>
