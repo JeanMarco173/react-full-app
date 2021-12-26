@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Preguntas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1 ¿Cuáles son las ceremonias más importantes de un Sprint y cuál es la idea de cada una?
+- Sprint Planning - Ceremonia que se lleva al inicio del sprint, en el cual se definen las HU que se desarrollaran en el sprint. 
+- Daily Scrum - Consisten en reuniones diarias de 15 minutos como máximo, donde todo el equipo comenta lo que ha realizado, va realizar en el día y los impedimentos que hay.
+- Sprint Review - Ceremonia que se lleva al final del sprint, donde el equipo presenta al PO lo desarrollado durante el Sprint.
+- Sprint Retrospective - Ceremonia que se lleva al final del sprint, donde el equipo reúne experiencias aprendidas durante el Sprint, se suele anotar opciones de mejoras y lecciones aprendidas.
+- Sprint Grooming - Son ceremonias que se llevan durante un Sprint con la finalidad de asegurar el cumplimiento de los objetivos del Sprint.
 
-## Available Scripts
+2 ¿Qué son los Wireframes? Nombra al menos una herramienta que podamos utilizar.
 
-In the project directory, you can run:
+- Son prototipos a bajo nivel que permiten maquetar una solución.
+- Herramientas - MarvelApp - Figma - Miro - Mockflow - También se pueden desarrollar en hojas.
 
-### `npm start`
+3 Explicar la diferencia entre var, let y const. Y dar un ejemplo en qué caso se utilizará.
+- const - variable que no puede cambiar su valor de forma total y solo puede ser llamada dentro del bloque donde fue declarada
+- let - variable que solo puede ser llamada dentro del bloque donde fue declarada
+- var - variable de scope global y local
+```js
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+function setName(){
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+	var users = 0;
 
-### `npm test`
+  function greet(userName){
+    let name = userName.toUpperCase();
+    const message = "GRACIAS POR REGISTRARTE."
+    users+=1;
+    return `${name}, ${message}`
+  }
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+}
+```
 
-### `npm run build`
+4 ¿Cuáles son los tres comandos que se pueden utilizar para crear una nueva rama llamada rama-1?
+- git checkout -b rama-1
+- git branch rama-1 -> git checkout rama-1
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+5 Explicar la diferencia entre git merge y git rebase
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- git mere une dos ramas manteniendo la historia de la rama principal y no elimina la rama secundaria.
+- gira rebase une dos ramas pero re-escribe la historia de la rama principal y elimina la semana secundaria.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+6 ¿Cuál es la diferencia entre Pull Request (PR) y el comando git pull?
+- Git pull trae todos los cambios desde un origen.
+- Pull Request genera una solicitud para que se pueda unir una rama A con la rama B.
 
-### `npm run eject`
+7 ¿Qué es el Virtual DOM?
+- Es una representacion virtual del DOM, en el caso de REACT se utiliza para representar los elementos de REACT.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+8 Dado el siguiente  [codePen](https://codepen.io/cristian-makeitreal/pen/NWadqqa?editors=1100) , el cual solo tiene un HTML, por medio de css llegar a esta respuesta.  [Imagen](https://github.com/makeitrealcamp/assesment-1-programa-top/blob/main/assets/services-section.gif) . (Para mostrar los servicios debes usar CSS Flexbox o CSS Grid).
+-[Repo](https://codesandbox.io/s/quirky-sea-s6ijf?file=/styles.css:150-167)
