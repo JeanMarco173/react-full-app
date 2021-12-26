@@ -32,7 +32,6 @@ const ProductCard = (props) => {
   },[seconds])
 
   function pad2(number) {
-    console.log('number',number);
     return (number < 10 ? '0' : '') + number
   }
 
